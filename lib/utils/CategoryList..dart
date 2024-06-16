@@ -298,7 +298,6 @@ List<Map<String, String>> entrepreneurQuotes = [
 
 List Save2 = [successQuotes, entrepreneurQuotes, freedomQuotes, creativeQuotes];
 
-
 List<Map<String, String>> loveQuotes = [
   {
     'author': 'Mahatma Gandhi',
@@ -307,12 +306,14 @@ List<Map<String, String>> loveQuotes = [
   },
   {
     'author': 'Lao Tzu',
-    'quote': 'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
+    'quote':
+        'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
     'img': 'assets/img/love/image4.jpeg'
   },
   {
     'author': 'Helen Keller',
-    'quote': 'The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart.',
+    'quote':
+        'The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart.',
     'img': 'assets/img/love/image6.jpeg'
   },
   {
@@ -327,7 +328,8 @@ List<Map<String, String>> loveQuotes = [
   },
   {
     'author': 'Maya Angelou',
-    'quote': 'Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.',
+    'quote':
+        'Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.',
     'img': 'assets/img/love/image10.jpeg'
   },
 ];

@@ -10,7 +10,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/Screens/HomePage.dart';
 import 'package:quote_app/Screens/category.da.dart';
 import 'package:quote_app/Screens/quotes.dart';
-import 'package:quote_app/Screens/thought.dart';
 import 'package:quote_app/utils/CategoryList..dart';
 import 'package:quote_app/utils/global.dart';
 import 'dart:ui' as ui;
@@ -268,11 +267,6 @@ class _ThoughtScreenState extends State<ThoughtScreen> {
             ],
           ),
         ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {
-        //     Navigator.of(context).pushNamed('/ed');
-        //   },
-        // ),
       ),
     );
   }

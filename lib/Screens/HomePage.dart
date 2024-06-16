@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -150,19 +149,18 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                           ),
                         ),
-                        GestureDetector(onTap: () {
-                          setState(() {
-                            ch= !ch;
-                          });
-                        },
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              ch = !ch;
+                            });
+                          },
                           child: Icon(
                             ch ? Icons.favorite : Icons.favorite_border,
                             color: Colors.white,
                             size: 40,
                           ),
                         ),
-
-
                       ],
                     ),
                   ),

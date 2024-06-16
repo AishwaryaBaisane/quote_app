@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -11,8 +10,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/Screens/HomePage.dart';
 import 'package:quote_app/Screens/category.da.dart';
 import 'package:quote_app/Screens/quotes.dart';
-
-// import 'package:quote_app/Screens/thought.dart';
 import 'package:quote_app/utils/CategoryList..dart';
 import 'package:quote_app/utils/global.dart';
 import 'package:share_extend/share_extend.dart';

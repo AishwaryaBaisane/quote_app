@@ -1,18 +1,14 @@
-
-import 'package:flutter/cupertino.dart';
-import 'package:quote_app/utils/global.dart';
-import 'package:quote_app/utils/quotesFile.dart';
-
 class QuotesModel {
   String? quote;
   String? author;
   String? img;
   List QuotesList = [];
 
-  QuotesModel({this.author, this.quote,this.img});
+  QuotesModel({this.author, this.quote, this.img});
 
   factory QuotesModel.fromQuotesModel(Map m1) {
-    return QuotesModel(author: m1['author'], quote: m1['quote'],img: m1['img']);
+    return QuotesModel(
+        author: m1['author'], quote: m1['quote'], img: m1['img']);
   }
 
   QuotesModel.toList(List l1) {
@@ -22,13 +18,12 @@ class QuotesModel {
   }
 }
 
-
 List QuoteList = [
   //Goal
   {
     'category': 'Goal',
     "quote":
-    "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+        "What you get by achieving your goals is not as important as what you become by achieving your goals.",
     "author": "Zig Ziglar"
   },
   {
@@ -39,7 +34,7 @@ List QuoteList = [
   {
     'category': 'Goal',
     "quote":
-    "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
+        "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
     "author": "Epictetus"
   },
   {
@@ -61,7 +56,7 @@ List QuoteList = [
   {
     'category': 'Positive',
     "quote":
-    "A creative man is motivated by the desire to achieve, not by the desire to beat others.",
+        "A creative man is motivated by the desire to achieve, not by the desire to beat others.",
     "author": "Ayn Rand"
   },
   {
@@ -77,32 +72,32 @@ List QuoteList = [
   {
     'category': 'Positive',
     "quote":
-    "Even if you’re on the right track, you’ll get run over if you just sit there.",
+        "Even if you’re on the right track, you’ll get run over if you just sit there.",
     "author": "Will Rogers"
   },
   //strong
   {
     'category': 'strong',
     "quote":
-    "Luck is a dividend of sweat. The more you sweat, the luckier you get.",
+        "Luck is a dividend of sweat. The more you sweat, the luckier you get.",
     "author": "Ray Kroc"
   },
   {
     'category': 'strong',
     "quote":
-    "Courage is the first of human qualities because it is the quality which guarantees all others.",
+        "Courage is the first of human qualities because it is the quality which guarantees all others.",
     "author": "Winston Churchill"
   },
   {
     'category': 'strong',
     "quote":
-    "The great thing in this world is not so much where you stand, as in what direction you are moving.",
+        "The great thing in this world is not so much where you stand, as in what direction you are moving.",
     "author": "Oliver Wendell Holmes"
   },
   {
     'category': 'strong',
     "quote":
-    "Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.",
+        "Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.",
     "author": "Carl Bard"
   },
   {
@@ -140,7 +135,7 @@ List QuoteList = [
   {
     'category': 'inspring',
     "quote":
-    "Don’t worry about failures, worry about the chances you miss when you don’t even try.",
+        "Don’t worry about failures, worry about the chances you miss when you don’t even try.",
     "author": "Jack Canfield"
   },
   {
@@ -156,7 +151,7 @@ List QuoteList = [
   {
     'category': 'inspring',
     "quote":
-    "The will to win, the desire to succeed, the urge to reach your full potential, these are the keys that will unlock the door to personal excellence.",
+        "The will to win, the desire to succeed, the urge to reach your full potential, these are the keys that will unlock the door to personal excellence.",
     "author": "Confucius"
   },
   {
@@ -168,19 +163,19 @@ List QuoteList = [
   {
     'category': 'happy',
     "quote":
-    "The world is full of magical things patiently waiting for our wits to grow sharper.",
+        "The world is full of magical things patiently waiting for our wits to grow sharper.",
     "author": "Bertrand Russell"
   },
   {
     'category': 'happy',
     "quote":
-    "Let us make our future now, and let us make our dreams tomorrow’s reality.",
+        "Let us make our future now, and let us make our dreams tomorrow’s reality.",
     "author": "Malala Yousafzai"
   },
   {
     'category': 'happy',
     "quote":
-    "All you need is the plan, the road map, and the courage to press on to your destination.",
+        "All you need is the plan, the road map, and the courage to press on to your destination.",
     "author": "Earl Nightingale"
   },
   {
@@ -217,7 +212,7 @@ List QuoteList = [
   {
     'category': 'sad',
     "quote":
-    "Follow your bliss and the universe will open doors where there were only walls.",
+        "Follow your bliss and the universe will open doors where there were only walls.",
     "author": "Joseph Campbell"
   },
   {
@@ -239,13 +234,13 @@ List QuoteList = [
   {
     'category': 'confidence',
     "quote":
-    "People who are crazy enough to think they can change the world, are the ones who do.",
+        "People who are crazy enough to think they can change the world, are the ones who do.",
     "author": "Rob Siltanen"
   },
   {
     'category': 'confidence',
     "quote":
-    "Imagine your life is perfect in every respect; what would it look like?",
+        "Imagine your life is perfect in every respect; what would it look like?",
     "author": "Brian Tracy"
   },
   {
@@ -261,55 +256,14 @@ List QuoteList = [
   {
     'category': 'confidence',
     "quote":
-    "Our greatest glory is not in never falling, but in rising every time we fall.",
+        "Our greatest glory is not in never falling, but in rising every time we fall.",
     "author": "Confucius"
   },
 
   {
     'category': 'confidence',
     "quote":
-    "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        "Success is not final, failure is not fatal: it is the courage to continue that counts.",
     "author": "Winston Churchill"
   },
 ];
-
-// class QuotesModel3 {
-//   String? h1;
-//   String? happy;
-//   AssetImage? img;
-//   // String? img;
-//   List QuotesList56 = [];
-//
-//   QuotesModel3({this.h1,this.happy,this.img});
-//
-//   factory QuotesModel3.fromQuotesModel2(Map m2) {
-//     return QuotesModel3(happy: m2['happy'], h1: m2['h1'],img: m2['img']);
-//   }
-//
-//   QuotesModel3.toList(List l2) {
-//     for (int i = 0; i < l2.length; i++) {
-//       QuotesList56.add(QuotesModel3.fromQuotesModel2(l2[i]));
-//     }
-//   }
-// }
-
-// class QuotesModel2
-// {
-//   String? img;
-//
-//   List QuotesList2 =[];
-//   QuotesModel2({this.img});
-//
-//   factory QuotesModel2.fromQuotesModel2(Map m2)
-//   {
-//     return  QuotesModel2(img: m2['img']);
-//   }
-//
-//   QuotesModel2.toList(List l2)
-//   {
-//     for (int i = 0; i < l2.length; i++) {
-//       QuotesList2.add(QuotesModel.fromQuotesModel(l2[i]));
-//     }
-//   }
-//
-// }

@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,19 +17,19 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushNamed('/home');
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        child: Image(
-          image: AssetImage(
-            'assets/img/splash/bg.jpeg',
-          ),
-          fit: BoxFit.cover,
+        body: Container(
+      height: double.infinity,
+      width: double.infinity,
+      child: Image(
+        image: AssetImage(
+          'assets/img/splash/bg.jpeg',
         ),
-      )
-    );
+        fit: BoxFit.cover,
+      ),
+    ));
   }
 }

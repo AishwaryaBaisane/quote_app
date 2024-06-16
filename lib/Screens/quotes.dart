@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quote_app/Screens/thought.dart';
-import 'package:quote_app/Screens/thought2.dart';
-import 'package:quote_app/Screens/thought3..dart';
 import 'package:quote_app/utils/global.dart';
 import 'package:quote_app/utils/quotesFile.dart';
 
@@ -63,129 +61,6 @@ class _QuotesScreenState extends State<QuotesScreen> {
   }
 }
 
-// SingleChildScrollView(
-//           child: Column(
-//             children: [
-//               SingleChildScrollView(
-//                 scrollDirection: Axis.horizontal,
-//                 child: Row(
-//                   children: List.generate(
-//                     ImageList.length,
-//                     (index) => GestureDetector(
-//                       onTap: () {
-//                         setState(() {
-//                           selectImg = false;
-//                           ind = index;
-//                           Navigator.of(context).pop();
-//                         });
-//                         print('byy');
-//                       },
-//                       child: Container(
-//                         margin: EdgeInsets.all(15),
-//                         height: 300,
-//                         width: 200,
-//                         decoration: BoxDecoration(
-//                           borderRadius: BorderRadius.all(
-//                             Radius.circular(15),
-//                           ),
-//                           image: DecorationImage(
-//                             image: AssetImage('${ImageList[index]['img']}'),
-//                             fit: BoxFit.cover,
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//               SingleChildScrollView(
-//                 scrollDirection: Axis.horizontal,
-//                 child: Row(
-//                   children: List.generate(
-//                     ImageList2.length,
-//                     (index) => GestureDetector(
-//                       onTap: () {
-//                         setState(() {
-//                           selectImg2 = false;
-//                           ind2 = index;
-//                           Navigator.of(context).pop();
-//                         });
-//                         print('byy');
-//                       },
-//                       child: Container(
-//                         margin: EdgeInsets.all(15),
-//                         height: 300,
-//                         width: 200,
-//                         decoration: BoxDecoration(
-//                           borderRadius: BorderRadius.all(
-//                             Radius.circular(15),
-//                           ),
-//                           image: DecorationImage(
-//                             image: AssetImage('${ImageList2[index]['img']}'),
-//                             fit: BoxFit.cover,
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//               SingleChildScrollView(
-//                 scrollDirection: Axis.horizontal,
-//                 child: Row(
-//                   children: List.generate(
-//                     ImageList3.length,
-//                     (index) => GestureDetector(
-//                       onTap: () {
-//                         setState(() {
-//                           selectImg3 = false;
-//                           ind3 = index;
-//                           Navigator.of(context).pop();
-//                         });
-//                         print('byy');
-//                       },
-//                       child: Container(
-//                         margin: EdgeInsets.all(15),
-//                         height: 300,
-//                         width: 200,
-//                         decoration: BoxDecoration(
-//                           borderRadius: BorderRadius.all(
-//                             Radius.circular(15),
-//                           ),
-//                           image: DecorationImage(
-//                             image: AssetImage('${ImageList3[index]['img']}'),
-//                             fit: BoxFit.cover,
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         )
-
-// ListView.builder(
-//         itemBuilder: (context, index) => Card(
-//           color: colorList[index % colorList.length],
-//           child: ListTile(
-//             title: Text(quotesModel!.QuotesList[index].quote!),
-//             subtitle: Text('-${quotesModel!.QuotesList[index].author!}',style: TextStyle(fontWeight: FontWeight.bold),),
-//           ),
-//         ),
-//       ),
-//List.generate(
-//           itemCount: QuotesList56.length,
-//           itemBuilder: (BuildContext context, int index) {
-//             Container(
-//               height: 500,
-//               width: 500,
-//               color: Colors.black,
-//             );
-//           },
-//         ),
-// List selectImg3 = [];
 int ind = 0;
 int ind2 = 0;
 int ind3 = 0;

@@ -1,6 +1,3 @@
-import 'dart:ui';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 List QutoesList = [
@@ -47,7 +44,6 @@ List QutoesList = [
     "author": "Amelia Earhart",
     'img': 'assets/img/home/positive.png',
   },
-
   {
     "quote":
         "Definiteness of purpose is the starting point of all achievement.",
@@ -103,7 +99,6 @@ List<Map<String, String>> sadThoughts = [
   {"thought": "Losing a beloved pet"},
   {"thought": "Feeling unappreciated or unnoticed"}
 ];
-
 
 List Category = [
   {
@@ -164,61 +159,59 @@ List Category2 = [
 
 List ImageList = [
   {
-    'img' :'assets/img/SelectImg/bg5.jpg',
+    'img': 'assets/img/SelectImg/bg5.jpg',
   },
   {
-    'img' :'assets/img/SelectImg/bg6.jpg',
+    'img': 'assets/img/SelectImg/bg6.jpg',
   },
   {
-    'img' :'assets/img/SelectImg/bg7.jpg',
+    'img': 'assets/img/SelectImg/bg7.jpg',
   },
   {
-    'img' :'assets/img/SelectImg/bg8.jpg',
+    'img': 'assets/img/SelectImg/bg8.jpg',
   },
   {
-    'img' :'assets/img/SelectImg/bg9.jpg',
+    'img': 'assets/img/SelectImg/bg9.jpg',
   },
   {
-    'img' :'assets/img/SelectImg/bg10.jpg',
+    'img': 'assets/img/SelectImg/bg10.jpg',
   },
   {
-    'img' :'assets/img/Category/im11.jpg',
+    'img': 'assets/img/Category/im11.jpg',
   },
   {
-    'img' :'assets/img/Category/im12.jpg',
+    'img': 'assets/img/Category/im12.jpg',
   },
   {
-    'img' :'assets/img/Category/im.jpg',
+    'img': 'assets/img/Category/im.jpg',
   },
   {
-    'img' :'assets/img/Category/im2.jpg',
+    'img': 'assets/img/Category/im2.jpg',
   },
   {
-    'img' :'assets/img/Category/im3.jpg',
+    'img': 'assets/img/Category/im3.jpg',
   },
   {
-    'img' :'assets/img/Category/im4.jpg',
+    'img': 'assets/img/Category/im4.jpg',
   },
   {
-    'img' :'assets/img/Category/im5.jpg',
+    'img': 'assets/img/Category/im5.jpg',
   },
   {
-    'img' :'assets/img/Category/im6.jpg',
+    'img': 'assets/img/Category/im6.jpg',
   },
   {
-    'img' :'assets/img/Category/im7.jpg',
+    'img': 'assets/img/Category/im7.jpg',
   },
   {
-    'img' :'assets/img/Category/im8.jpg',
+    'img': 'assets/img/Category/im8.jpg',
   },
   {
-    'img' :'assets/img/Category/im9.jpg',
+    'img': 'assets/img/Category/im9.jpg',
   },
   {
-    'img' :'assets/img/Category/im10.jpg',
+    'img': 'assets/img/Category/im10.jpg',
   },
-
-
 ];
 
 // List ImageList2 = [
@@ -266,8 +259,7 @@ List ImageList = [
 //
 // ];
 
-
-List LikeList =[];
+List LikeList = [];
 
 List colorList = [
   Colors.white30,

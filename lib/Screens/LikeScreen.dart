@@ -14,12 +14,13 @@ class _LikeScreenState extends State<LikeScreen> {
     return SafeArea(
       child: Scaffold(
         body: Column(
-            children: [
-          ...List.generate(
-            LikeList.length,
-            (index) => Text('${LikeList[index]}'),
-          )
-        ]),
+          children: [
+            ...List.generate(
+              LikeList.length,
+              (index) => Text('${LikeList[index]}'),
+            )
+          ],
+        ),
       ),
     );
   }
