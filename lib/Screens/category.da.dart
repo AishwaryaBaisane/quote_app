@@ -17,10 +17,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: InkWell(onTap: () {
+          Navigator.of(context).pop();
+        },child: Icon(Icons.arrow_back_ios)),
         centerTitle: true,
         title: Text(
           'Categorys',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),
         ),
       ),
       body: SingleChildScrollView(
