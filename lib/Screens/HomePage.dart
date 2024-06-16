@@ -2,6 +2,8 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
+import 'package:quote_app/Screens/them.dart';
 import 'package:quote_app/utils/global.dart';
 import 'package:quote_app/utils/quotesFile.dart';
 
@@ -29,7 +31,12 @@ class _HomePageState extends State<HomePage> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        leading: Provider.of<ThemeProvider>(context, listen: true).isDark
+            ? const Icon(Icons.dark_mode)
+            : const Icon(
+                Icons.light_mode,
+                color: Colors.black26,
+              ),
         title: Text(
           'Quotes of the Day',
           style: TextStyle(
@@ -37,138 +44,128 @@ class _HomePageState extends State<HomePage> {
             fontSize: 30,
           ),
         ),
-        leading: ActionChip(
-          label: Text(''),
-          backgroundColor: Colors.white,
-          shape: CircleBorder(
-            side: BorderSide(color: Colors.white),
-          ),
-          avatar: Padding(
-            padding: const EdgeInsets.only(left: 5),
-            child: Icon(
-              ch ? (Icons.dark_mode) : (Icons.sunny),
-              color: Colors.black26,
-              size: 25,
-            ),
-          ),
-          onPressed: () {
-            setState(() {
-              ch = !ch;
-            });
-          },
-        ),
-        // backgroundColor: Colors.red,
-        // bottom: BottomAppBar(color: Colors.blue,),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              Text(
-                '   Good Afternoon!',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            height: height * 0.7,
-            width: width * 0.9 - 20,
-            decoration: BoxDecoration(
-              color: Colors.black45,
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Center(
-              child: Stack(
-                children: [
-                  Container(
-                    height: height * 0.7,
-                    width: width * 0.9 - 20,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('${quotesModel!.QuotesList[x].img}'),
-                        fit: BoxFit.cover,
-                      ),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                  SizedBox(
-                    height: height * 0.3,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Center(
-                      child: ListTile(
-                        title: Text(
-                          '${quotesModel!.QuotesList[x].quote}',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 25,
-                          ),
-                        ),
-                        subtitle: Padding(
-                          padding: const EdgeInsets.only(top: 40),
-                          child: Text(
-                            '-${quotesModel!.QuotesList[x].author}',
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 30),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 510),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            setState(() {
-                              Random random = Random();
-                              x = random
-                                  .nextInt(quotesModel!.QuotesList.length);
-                            });
-                          },
-                          icon: Icon(
-                            Icons.restart_alt_outlined,
-                            size: 40,
-                            color: Colors.white,
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              ch = !ch;
-                            });
-                          },
-                          child: Icon(
-                            ch ? Icons.favorite : Icons.favorite_border,
-                            color: Colors.white,
-                            size: 40,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+        actions: [
+          Switch(
+            value: Provider.of<ThemeProvider>(context, listen: true).isDark,
+            onChanged: (value) {
+              Provider.of<ThemeProvider>(context, listen: false)
+                  .Changetheme(value);
+            },
           ),
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              children: [
+                Text(
+                  '   Good Afternoon!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 2,
+            ),
+            Container(
+              height: height * 0.7,
+              width: width * 0.9 - 20,
+              decoration: BoxDecoration(
+                color: Colors.black45,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Center(
+                child: Stack(
+                  children: [
+                    Container(
+                      height: height * 0.7,
+                      width: width * 0.9 - 20,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image:
+                              AssetImage('${quotesModel!.QuotesList[x].img}'),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.3,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Center(
+                        child: ListTile(
+                          title: Text(
+                            '${quotesModel!.QuotesList[x].quote}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 25,
+                            ),
+                          ),
+                          subtitle: Padding(
+                            padding: const EdgeInsets.only(top: 40),
+                            child: Text(
+                              '-${quotesModel!.QuotesList[x].author}',
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 30),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 510),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              setState(() {
+                                Random random = Random();
+                                x = random
+                                    .nextInt(quotesModel!.QuotesList.length);
+                              });
+                            },
+                            icon: Icon(
+                              Icons.restart_alt_outlined,
+                              size: 40,
+                              color: Colors.white,
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                ch = !ch;
+                              });
+                            },
+                            child: Icon(
+                              ch ? Icons.favorite : Icons.favorite_border,
+                              color: Colors.white,
+                              size: 40,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(14),
