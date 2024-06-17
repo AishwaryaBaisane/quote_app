@@ -227,8 +227,8 @@ class _ThoughtScreenState extends State<ThoughtScreen> {
                                 size: 50,
                               ),
                             ),
-                            InkWell(
-                              onTap: () async {
+                            IconButton(
+                              onPressed: () async {
                                 RenderRepaintBoundary boundary = imgkey[index]
                                         .currentContext!
                                         .findRenderObject()
@@ -243,20 +243,21 @@ class _ThoughtScreenState extends State<ThoughtScreen> {
                                     await getApplicationDocumentsDirectory();
                                 File file = File("${path.path}/img.png");
                                 file.writeAsBytes(img);
-                                // ShareExtend.share(file.path, "image");
+                                ShareExtend.share(file.path, "image");
                                 int location = WallpaperManager
                                     .BOTH_SCREEN; //can be Home/Lock Screen
                                 bool result =
                                     await WallpaperManager.setWallpaperFromFile(
                                         file.path, location);
+                                Navigator.pop(context);
                                 //
                               },
-                              child: Icon(
+                              icon: Icon(
                                 Icons.wallpaper,
                                 color: Colors.white,
                                 size: 45,
                               ),
-                            ),
+                            )
                           ],
                         ),
                       ],

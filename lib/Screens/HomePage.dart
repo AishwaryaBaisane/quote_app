@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
         leading: Provider.of<ThemeProvider>(context, listen: true).isDark
             ? const Icon(Icons.dark_mode)
             : const Icon(
-                Icons.light_mode,
-                color: Colors.black26,
+                Icons.light_mode,size: 30,
+                color: Colors.black38,
               ),
         title: Text(
           'Quotes of the Day',
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 530),
+                      padding: const EdgeInsets.only(top: 520),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

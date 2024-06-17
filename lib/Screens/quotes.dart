@@ -30,7 +30,6 @@ class _QuotesScreenState extends State<QuotesScreen> {
               setState(() {
                 selectImg = false;
                 ind = index;
-                // Si = ImageList[index]['img'];
                 Navigator.of(context).pop();
               });
             },

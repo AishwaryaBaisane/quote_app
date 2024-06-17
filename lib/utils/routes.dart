@@ -10,8 +10,8 @@ import 'package:quote_app/Screens/thought3..dart';
 
 class AppRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
-    '/': (context) => HomePage(),
-    '/splash': (context) => SplashScreen(),
+    '/home': (context) => HomePage(),
+    '/': (context) => SplashScreen(),
     '/cat': (context) => CategoryScreen(),
     '/qt': (context) => QuotesScreen(),
     '/th': (context) => ThoughtScreen(),
