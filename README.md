@@ -14,3 +14,7 @@ A new Flutter project.
   <img src = "https://github.com/AishwaryaBaisane/quote_app/assets/149373597/4b969d9c-49e9-478e-831d-215da89108b1"  height = 25% width = 25%>
   <img src = "https://github.com/AishwaryaBaisane/quote_app/assets/149373597/7c6177bf-f545-4c7a-aa51-ee5caf725876)"  height = 25% width = 25%>
 </p>
+
+
+https://github.com/AishwaryaBaisane/quote_app/assets/149373597/a0cdb876-5db7-4e77-8714-bdfe5738b0f3
+
